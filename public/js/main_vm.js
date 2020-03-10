@@ -1,7 +1,20 @@
 // imports always go first - if we're importing anything
 import ChatMessage from "./modules/ChatMessage.js";
+import LoginComponent from "./modules/LoginComponent.js";
 
 const socket = io();
+
+(() => {
+    let router = new VueRouter({
+        //set routes
+        routes: [
+            { path: '/', redirect: { name: "login"} },
+            { path: '/login', name: "login", component: LoginComponent },
+            { path: '/chat', name: "chat", component: ChatMessage },
+
+        ]
+    });
+
 
 // this is data deconstucting. go look it up on MDN
 function setUserId({sID}) {
@@ -51,3 +64,5 @@ const vm = new Vue({
 socket.addEventListener('connected', setUserId);
 socket.addEventListener('disconnect', showDisconnectMessage)
 socket.addEventListener('new_message', appendMessage)
+
+})
