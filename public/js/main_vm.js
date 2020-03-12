@@ -1,5 +1,15 @@
 // imports always go first - if we're importing anything
 import ChatMessage from "./modules/ChatMessage.js";
+// import LoginComponent from "./modules/LoginComponent.js";
+
+// (() => {
+//     let router = new VueRouter({
+//         //set routes
+//         routes: [
+//            { path: '/', redirect: { name: "login" } },
+//            { path: '/login', name: "login", component: LoginComponent },
+//         ]
+//     });
 
 const socket = io();
 
@@ -16,6 +26,7 @@ function connectSound(){
     // Plays sound when a user connects
     var connectSound = new Audio("audio/user_connect.mp3");
     connectSound.play();
+
 
     // Adds a user to userNum when someone connects
     vm.userNum += 1;
@@ -84,4 +95,5 @@ socket.addEventListener('user_disconnect', runDisconnectMessage);
 socket.addEventListener('new_message', appendNewMessage);
 
 
+//// Sound handling ////
 
