@@ -1,6 +1,6 @@
 ## Lucas Mastroianni - Chat App
 
-Pink Couch is a chat room application. This build is based of an in-class assignment - additions include user count, connection notification sounds, and message notification sounds between users. I ran the app in google chrome and firefox.
+Pink Couch is a chat room application. This build is based of an in-class assignment - additions include a new skin, user count, connection notification sounds, and message notification sounds between users. I ran the app in google chrome and firefox.
 
 ## Prerequisites
 To run this project, you need a web browser, Git Bash (if on Windows), and Node.
