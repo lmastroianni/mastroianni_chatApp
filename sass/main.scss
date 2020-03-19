@@ -85,6 +85,19 @@ form {
 	li:nth-child(odd) { background: #eee; }
 }
 
+
+h1
+{
+	font-size: 30px;
+	color:#fff5d7;
+	margin: 20px;
+}
+
+h1 span{
+	color:#ff5e63;
+	-webkit-text-stroke-width:1px;
+    -webkit-text-stroke-color: black;
+}
 // imports
 
 @import 'modules/_message';
