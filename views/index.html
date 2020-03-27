@@ -7,12 +7,26 @@
 	<!-- <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico"> -->
 	<link rel="stylesheet" href="css/main.css">
 	<script src="https://unpkg.com/vue"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+	
 </head>
 
 <body>
+
+	<div class="wrapper">
+		<h3 class="introline">Welcome</p>
+		<div class="greensock">
+		  <h1 class="bigline sock sockOne">Couch</1>
+		  <h1 class="bigline sock">Couch</1>
+		  <h1 class="bigline green">To Pink</1>
+		</div>
+	  </div>
+	  
 	<main id="app">
 		<section class="form-container">
-			<h1>Welcome to <span>Pink Couch</span></h1>
+			<!-- <h1>Welcome to Pink Couch</h1> -->
+
+			
 			
 			<label for="nickname">Your Nickname (optional)</label>
 			<input v-model="nickName" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
@@ -29,12 +43,13 @@
 		<section class="messages">
 			<ul id="messages" v-for="message in messages">
 				<!-- render a new message component for every message -->
-				<newmessage :msg="message"></newmessage>
+				     <newmessage :msg="message"></newmessage>
 			</ul>
 		</section>
-	</main>
+	</main> 
 	<script src="/socket.io/socket.io.js"></script>
 	<script type="module" src="js/main_vm.js"></script>
-</body>
+	<script src="js/main.js"></script>
+    </body>
 
 </html>
